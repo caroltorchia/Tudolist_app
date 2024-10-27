@@ -1,0 +1,12 @@
+<!-- adicionar_nota.html -->
+{% extends 'base_generic.html' %}
+{% block title %}Adicionar Nota{% endblock %}
+
+{% block content %}
+  <h2>Adicionar Nota</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Salvar</button>
+  </form>
+{% endblock %}

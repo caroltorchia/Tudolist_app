@@ -1,0 +1,41 @@
+html, body {
+    height: 100%;
+    font-family: "Zen Kaku Gothic Antique", sans-serif;
+}
+
+.gfg {
+    height: 50px;
+    width: 50px;
+
+}
+#bdSidebar{
+    width: 44px;
+    
+}
+
+.mynav {
+    color:#d9d9d9;
+    width: 100%px;
+}
+
+.mynav li a {
+    color: #979797;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    padding: 8px 5px;
+}
+
+.mynav li a.active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.mynav li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.mynav li a i {
+    width: 25px;
+    text-align: center;
+}

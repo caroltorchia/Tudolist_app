@@ -1,0 +1,47 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+   <div class"toolbar" style="display: flex; justify-content: space-between; flex-direction: row;">
+      <h2>Progresso Acadêmico</h2>
+      <button type="button" style="width: auto;"><a href="{% url 'historico:adicionar_nota' %}">Adicionar Nota</a></button>
+   </div> 
+   <div class="card">
+    <div class="card-body">
+      <table class="table bordered" style="width: 100%;">
+        <tr>
+          <th>Disciplina</th>
+          <th>Média</th>
+          <th>Notas</th>
+          <th>Alerta</th>
+        </tr>
+        {% for disciplina, dados in progresso.items %}
+          <tr>
+            <td>{{ disciplina }}</td>
+            <td>{{ dados.media }}</td>
+            <td>
+              <ul>
+                {% for nota in dados.notas %}
+                  <li>{{ nota.tipo }}: {{ nota.nota }}</li>
+                {% endfor %}
+              </ul>
+            </td>
+            <td>
+              {% if dados.alerta %}
+                <span style="color: red;">Desempenho abaixo do esperado!</span>
+              {% else %}
+              <span style="color: green;">Parabéns! Continue assim!</span>
+              {% endif %}
+            </td>
+            <td>
+                <form action="{% url 'historico:revisar_nota' disciplina %}" method="post">
+                  {% csrf_token %}
+                  <button type="submit">Pedir Revisão de Nota</button>
+                </form>
+              </td>
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+ 
+{% endblock %}
