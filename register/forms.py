@@ -34,7 +34,7 @@ class LoginForm(AuthenticationForm):
                 'class': "form-control", 
                 'placeholder': 'email@example.com'
                 }))
-    password = forms.CharField(label="Password", widget=forms.PasswordInput(attrs={
+    password = forms.CharField(label="Senha", widget=forms.PasswordInput(attrs={
                 'class': "form-control",
                 'placeholder': 'Senha'
                 }))

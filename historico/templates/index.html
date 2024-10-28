@@ -32,12 +32,6 @@
               <span style="color: green;">Parabéns! Continue assim!</span>
               {% endif %}
             </td>
-            <td>
-                <form action="{% url 'historico:revisar_nota' disciplina %}" method="post">
-                  {% csrf_token %}
-                  <button type="submit">Pedir Revisão de Nota</button>
-                </form>
-              </td>
           </tr>
         {% endfor %}
       </table>
