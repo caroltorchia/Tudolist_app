@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var timerElement = document.getElementById('timer');
-    var resendButton = document.getElementById('resendButton');
-    var timeLeft = 30; 
+    let timerElement = document.getElementById('timer');
+    let resendButton = document.getElementById('resendButton');
+    let timeLeft = 30; 
 
-    var countdown = setInterval(function() {
+    let countdown = setInterval(function() {
         if (timeLeft <= 0) {
             clearInterval(countdown);
             resendButton.disabled = false;  
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    var inputs = document.querySelectorAll('.code-inputs input');
+    let inputs = document.querySelectorAll('.code-inputs input');
     inputs.forEach(function(input, index) {
         input.addEventListener('input', function() {
             if (input.value.length === 1 && index < inputs.length - 1) {
@@ -46,12 +46,12 @@ document.addEventListener('DOMContentLoaded', function() {
 document.querySelector('form').addEventListener('submit', function(e) {
     e.preventDefault(); 
 
-    var code = '';
+    let code = '';
     document.querySelectorAll('.code-inputs input').forEach(function(input) {
         code += input.value;
     });
 
-    fetch('/confirm_code/', {
+    fetch('/confirm_verification/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
