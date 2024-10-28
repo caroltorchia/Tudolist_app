@@ -12,28 +12,30 @@
           <th>Disciplina</th>
           <th>Média</th>
           <th>Notas</th>
-          <th>Alerta</th>
+          <th>Desempenho</th>
         </tr>
-        {% for disciplina, dados in progresso.items %}
-          <tr>
-            <td>{{ disciplina }}</td>
-            <td>{{ dados.media }}</td>
-            <td>
-              <ul>
-                {% for nota in dados.notas %}
-                  <li>{{ nota.tipo }}: {{ nota.nota }}</li>
-                {% endfor %}
-              </ul>
-            </td>
-            <td>
-              {% if dados.alerta %}
-                <span style="color: red;">Desempenho abaixo do esperado!</span>
-              {% else %}
-              <span style="color: green;">Parabéns! Continue assim!</span>
-              {% endif %}
-            </td>
-          </tr>
-        {% endfor %}
+      </tr>
+      {% for disciplina, dados in progresso.items %}
+        <tr>
+          <td>{{ disciplina }}</td>
+          <td>{{ dados.media }}</td>
+          <td>
+            <ul>
+              {% for nota in dados.notas %}
+                <li>{{ nota.tipo }}: {{ nota.nota }}</li>
+              {% endfor %}
+            </ul>
+          </td>
+          <td>
+            {% if dados.media < 50 %}
+              <span style="color: red;">{{ dados.media }}%</span>
+            {% else %}
+              <span style="color: green;">{{ dados.media }}%</span>
+            {% endif %}
+          </td>
+        </tr>
+      {% endfor %}
+      
       </table>
     </div>
   </div>
