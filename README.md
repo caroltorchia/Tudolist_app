@@ -26,34 +26,17 @@ Board com backlog e items para sprint
 
 ## Protótipos
 
-- Cadastro - Jira e Figma
+- Cadastro 
 
-![Cadastro - Jira ](/imgs/Fazer%20Cadastro.png)
-![adastro - Figma](/imgs/Fazer%20Cadastro%20-%20Figma.png)
+- Login 
+- ![Captura de tela_27-10-2024_222122_127 0 0 1](https://github.com/user-attachments/assets/8a8b42ff-deda-4eeb-804b-96e993ebca1d)
 
-- Login - Jira e Figma
 
-![Login - Jira ](/imgs/Fazer%20Login.png)
-![Login - Figma](/imgs/Fazer%20Login%20-%20figma.png)
 
-- Editar dados do usuário - Jira e Figma
+- Progresso Acadêmico -
+-  ![Captura de tela_27-10-2024_231358_127 0 0 1](https://github.com/user-attachments/assets/86404dab-4b8a-42b5-9afe-ee96d083a578)
 
-![Editar dados do usuário - Jira ](/imgs/Editar%20Dados.png)
-![Editar dados do usuário - Figma](/imgs/Editar%20Dados%20-%20Figma.png)
 
-- Organização de Tarefas - Jira e Figma
-
-![Organização de Tarefas - Jira](/imgs/Organizar%20Tarefas.png)
-![Organização de Tarefas - Figma(/imgs/Organizar%20Tarefas%20-%20Figma.png)
-
-- Registro de Notas - Jira e Figma
-
-![Registrar notas Jira](/imgs/Registrar%20notas.png)
-![Registrar notas Figma](/imgs/Registrar%20notas%20-%20Figma.png)
-
-- ScreenCast da plataforma:
-
-[aqui](imgs/Vídeo.mp4)
 
 ### 💻 Como rodar o projeto na sua máquina:
 
