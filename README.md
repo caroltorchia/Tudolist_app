@@ -28,7 +28,9 @@ Board com backlog e items para sprint
 
 - Cadastro - Jira e Figma
 
-- Login - Jira e Figma
+- Login -
+- ![Captura de tela_27-10-2024_222122_127 0 0 1](https://github.com/user-attachments/assets/8a8b42ff-deda-4eeb-804b-96e993ebca1d)
+
 
 
 - Editar dados do usuário - Jira e Figma
@@ -39,7 +41,9 @@ Board com backlog e items para sprint
 
 
 
-- Registro de Notas - Jira e Figma
+- Progresso Acadêmico -
+-  ![Captura de tela_27-10-2024_231358_127 0 0 1](https://github.com/user-attachments/assets/86404dab-4b8a-42b5-9afe-ee96d083a578)
+
 
 
 
