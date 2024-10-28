@@ -26,18 +26,10 @@ Board com backlog e items para sprint
 
 ## Protótipos
 
-- Cadastro - Jira e Figma
+- Cadastro 
 
-- Login -
+- Login 
 - ![Captura de tela_27-10-2024_222122_127 0 0 1](https://github.com/user-attachments/assets/8a8b42ff-deda-4eeb-804b-96e993ebca1d)
-
-
-
-- Editar dados do usuário - Jira e Figma
-
-
-
-- Organização de Tarefas - Jira e Figma
 
 
 
@@ -45,9 +37,6 @@ Board com backlog e items para sprint
 -  ![Captura de tela_27-10-2024_231358_127 0 0 1](https://github.com/user-attachments/assets/86404dab-4b8a-42b5-9afe-ee96d083a578)
 
 
-
-
-- ScreenCast da plataforma:
 
 ### 💻 Como rodar o projeto na sua máquina:
 
