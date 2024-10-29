@@ -6,7 +6,33 @@
   <h2>Adicionar Nota</h2>
   <form method="post">
     {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Salvar</button>
+
+    <div class="row g-3">
+
+      <div class="col-sm-12">
+        <div class="form-floating">
+          {{ form.disciplina.errors }}
+          {{ form.disciplina }}
+          {{ form.disciplina.label_tag }}
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="form-floating">
+          {{ form.tipo.errors }}
+          {{ form.tipo }}
+          {{ form.tipo.label_tag }}
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="form-floating">
+          {{ form.nota.errors }}
+          {{ form.nota }}
+          {{ form.nota.label_tag }}
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <button class="btn btn-dark" type="submit">Salvar</button>
+      </div>
+    </div>
   </form>
 {% endblock %}

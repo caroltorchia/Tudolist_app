@@ -1,9 +1,9 @@
 {% extends 'base_generic.html' %}
 
 {% block content %}
-   <div class"toolbar" style="display: flex; justify-content: space-between; flex-direction: row;">
+   <div class="toolbar" style="display: flex; justify-content: space-between; flex-direction: row;">
       <h2>Progresso Acadêmico</h2>
-      <button type="button" style="width: auto;"><a href="{% url 'historico:adicionar_nota' %}">Adicionar Nota</a></button>
+      <a class="btn btn-dark mb-3" href="{% url 'historico:adicionar_nota' %}">Adicionar Nota</a>
    </div> 
    <div class="card">
     <div class="card-body">
