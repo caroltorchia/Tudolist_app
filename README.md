@@ -19,7 +19,7 @@ Desenvolvido por: Ana Carolina Torchia de Souza
 - **Registro de Notas e Progresso Acadêmico:** Registre suas notas e acompanhe seu progresso ao longo do semestre.
 - **Personalização de Idioma:** Mude o idioma da interface da plataforma para atender suas preferências linguísticas.
 
-## JIRA
+## TRELLO & GITHUB
 
 Board com backlog e items para sprint
 
