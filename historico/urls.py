@@ -4,7 +4,7 @@ from . import views
 
 urlpatterns = [
     path("", views.index, name="index"),
-    path("<int:id>", views.adicionar_nota, name="editar"),
-    path('adicionar_nota/', views.adicionar_nota, name='adicionar_nota'),
+    path("notas/<int:id>/edit", views.adicionar_nota, name="editar_nota"),
+    path('notas/add', views.adicionar_nota, name='adicionar_nota'),
     path('revisar_nota/<str:disciplina>/', views.revisar_nota, name='revisar_nota'),
 ]

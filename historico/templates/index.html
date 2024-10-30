@@ -1,20 +1,21 @@
-{% extends 'base_generic.html' %}
-
+{% extends "base_generic.html" %}
 {% block content %}
-   <div class="toolbar" style="display: flex; justify-content: space-between; flex-direction: row;">
-      <h2>Progresso Acadêmico</h2>
-      <a class="btn btn-dark mb-3" href="{% url 'historico:adicionar_nota' %}">Adicionar Nota</a>
-   </div> 
-   <div class="card">
+  <div class="toolbar"
+       style="display: flex;
+              justify-content: space-between;
+              flex-direction: row">
+    <h2>Progresso Acadêmico</h2>
+    <a class="btn btn-dark mb-3" href="{% url 'historico:adicionar_nota' %}">Adicionar Nota</a>
+  </div>
+  <div class="card">
     <div class="card-body">
-      <table class="table bordered" style="width: 100%;">
+      <table class="table table-bordered table-hover table-responsive">
         <tr>
           <th>Disciplina</th>
           <th>Média</th>
           <th>Notas</th>
           <th>Desempenho</th>
         </tr>
-      </tr>
       {% for disciplina, dados in progresso.items %}
         <tr>
           <td>{{ disciplina }}</td>
@@ -22,7 +23,9 @@
           <td>
             <ul>
               {% for nota in dados.notas %}
-                <li>{{ nota.tipo }}: {{ nota.nota }}</li>
+                <li>
+                  <a>{{ nota.tipo }}: {{ nota.nota }}</a>
+                </li>
               {% endfor %}
             </ul>
           </td>
@@ -35,9 +38,7 @@
           </td>
         </tr>
       {% endfor %}
-      
-      </table>
-    </div>
+    </table>
   </div>
- 
+</div>
 {% endblock %}

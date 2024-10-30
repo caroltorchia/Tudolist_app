@@ -1,0 +1,31 @@
+{% load static %}
+{% load django_bootstrap5 %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta name="description"
+          content="TudoList - Uma plataforma para gerenciar tarefas acadêmicas eficientemente.">
+    <meta name="keywords"
+          content="TudoList, gestão de tarefas acadêmicas, organização estudantil">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% block title %}
+        TudoList -
+      {% endblock title %}
+    </title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300;400;500;700;900&display=swap"
+          rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body class="d-flex align-items-center py-4 bg-body-tertiary overflow-y-hidden">
+    {% bootstrap_messages %}
+    {% block body %}{% endblock body %}
+  </body>
+</html>
