@@ -15,11 +15,11 @@ Desenvolvido por: Ana Carolina Torchia de Souza
 ## Funcionalidades
 
 - **Organização de Tarefas:** Adicione, categorize, edite e acompanhe suas tarefas acadêmicas.
-- **Gerenciamento de Horários:** Visualize e gerencie seu calendário de aulas e eventos acadêmicos.
+- **Cadastro e Login no sistema:** Cadastre-se e faça seu login para acessar o sistema.
 - **Registro de Notas e Progresso Acadêmico:** Registre suas notas e acompanhe seu progresso ao longo do semestre.
-- **Personalização de Idioma:** Mude o idioma da interface da plataforma para atender suas preferências linguísticas.
 
-## JIRA
+
+## TRELLO & GITHUB
 
 Board com backlog e items para sprint
 
