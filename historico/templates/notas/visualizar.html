@@ -1,0 +1,28 @@
+<!-- visualizar_nota.html -->
+{% extends "base_generic.html" %}
+{% load static %}
+{% load django_bootstrap5 %}
+{% block title %}
+  Visualizar Nota
+{% endblock title %}
+{% block content %}
+  <h2>Visualizar Nota</h2>
+  <p>
+    <strong>Tipo:</strong> {{ nota.tipo }}
+  </p>
+  <p>
+    <strong>Data:</strong> {{ nota.created_at|date:"d/M/Y" }}
+  </p>
+  <p>
+    <strong>Nota:</strong> {{ nota.nota }}
+  </p>
+  <p>
+    <strong>Observações:</strong>
+  </p>
+  <pre>{{ nota.observacoes|safe }}</pre>
+  {% url "historico:excluir_nota" nota.id as excluir_nota_url %}
+  {% url "historico:editar_nota" nota.id as editar_nota_url %}
+  {% bootstrap_button button_type="link" href=editar_nota_url content="Editar" button_class="btn btn-primary" %}
+  {% bootstrap_button button_type="link" href=excluir_nota_url content="Excluir" button_class="btn btn-danger" %}
+  <a href="{% url 'historico:index' %}" class="btn btn-secundary">Voltar</a>
+{% endblock content %}

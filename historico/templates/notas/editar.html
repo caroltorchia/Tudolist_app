@@ -1,0 +1,19 @@
+<!-- editar_nota.html -->
+{% extends "base_generic.html" %}
+{% load static %}
+{% load django_bootstrap5 %}
+{% block title %}Editar Nota{% endblock title %}
+
+{% block content %}
+  <h2>Editar Nota</h2>
+  <form method="post" class="needs-validation" novalidate>
+    {% csrf_token %}
+    {% bootstrap_form form layout="floating" %}
+
+      <div class="col-sm-12">
+        {% bootstrap_button button_type="submit" content="Salvar" button_class="btn-dark" %}
+
+        <a href="{% url "historico:visualizar_nota" nota.id %}" class="btn btn-secondary" >Cancelar</a>
+      </div>
+  </form>
+{% endblock content %}

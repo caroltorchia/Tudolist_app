@@ -1,10 +1,9 @@
 """
 register/views.py
+Este módulo contém visualizações para registro e autenticação de usuários.
 
-This module contains views for user registration and authentication.
-
-It includes functions for handling user signup, email verification,
-login, and logout processes.
+Inclui funções para lidar com inscrição de usuários, verificação de e-mail,
+processos de login e logout.
 """
 
 from django.contrib import messages

@@ -24,7 +24,7 @@
             <ul>
               {% for nota in dados.notas %}
                 <li>
-                  <a>{{ nota.tipo }}: {{ nota.nota }}</a>
+                  <a href="{% url "historico:visualizar_nota" nota.id %}">{{ nota.tipo }}: {{ nota.nota }}</a>
                 </li>
               {% endfor %}
             </ul>
