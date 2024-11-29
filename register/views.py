@@ -9,11 +9,12 @@ processos de login e logout.
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.core.mail import send_mail
-from django.http import JsonResponse
+# from django.http import JsonResponse
 from django.shortcuts import redirect, render
 from django.utils.crypto import get_random_string
 
 from .forms import LoginForm, RegisterForm
+# import json
 
 
 def index(request):
@@ -54,16 +55,24 @@ def send_verification(request):
 def confirm_verification(request):
     user_email = request.session.get("user_email", None)
     if request.method == "POST":
+        # code_entered = json.loads(request.body).get("code")
         code_entered = "".join(request.POST.getlist("code"))
+
         code_sent = request.session.get("verification_code")
 
         if code_entered == code_sent:
             messages.success(request, "E-mail verificado com sucesso!")
-            return JsonResponse({"success": True})
+            # return JsonResponse({"success": True})
+            return redirect("register:successful_confirmation")
         messages.error(request, "Código inválido. Tente novamente.")
-        return JsonResponse({"success": False})
+        # return JsonResponse({"success": False})
+        return redirect("register:confirm_verification")
 
     return render(request, "register/verification.html", {"user_email": user_email})
+
+
+def successful_confirmation(request):
+    return render(request, "register/success.html")
 
 
 def login_user(request):

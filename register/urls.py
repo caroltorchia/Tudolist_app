@@ -12,4 +12,7 @@ urlpatterns = [
     path(
         "confirm_verification/", views.confirm_verification, name="confirm_verification"
     ),
+    path(
+        "success/", views.successful_confirmation, name="successful_confirmation"
+    ),
 ]
