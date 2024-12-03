@@ -21,14 +21,16 @@ load_dotenv(ENV_PATH)
 
 INSECURE_SECRET_KEY = 'django-insecure-&psk#na5l=p3q8_a+-$4w1f^lt3lx1c@d*p4x$ymm_rn7pwb87'
 
-SECRET_KEY = environ.get('DJANGO_SECRET_KEY', INSECURE_SECRET_KEY)
+SECRET_KEY = environ.get('SECRET_KEY', INSECURE_SECRET_KEY)
 
-DEBUG = environ.get('DJANGO_DEBUG', '') != 'False'
+DEBUG = environ.get('DEBUG', '') != 'False'
 
 ALLOWED_HOSTS = ["*"]
 INTERNAL_IPS = ["128.0.0.1"]
 
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'https://tudolist-app.fly.dev/']
 
+CSRF_TRUSTED_ORIGINS = ['https://tudolist-app.fly.dev/']
 
 
 # Application definition

@@ -27,8 +27,8 @@ console_command = '/code/manage.py shell'
 
 [mounts]
 source="tudolist"
-destination="/app/static"
+destination="/code/static"
 
 [[statics]]
-  guest_path = '/app/app_tudo_list/static'
+  guest_path = '/code/staticfiles'
   url_prefix = '/static/'

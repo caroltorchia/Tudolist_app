@@ -5,16 +5,16 @@ FROM python:${PYTHON_VERSION}
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-RUN mkdir -p /app
+RUN mkdir -p /code
 
-WORKDIR /app
+WORKDIR /code
 
 COPY requirements.txt /tmp/requirements.txt
 RUN set -ex && \
     pip install --upgrade pip && \
     pip install -r /tmp/requirements.txt && \
     rm -rf /root/.cache/
-COPY . /app
+COPY . /code/
 
 EXPOSE 8000
 
