@@ -136,8 +136,6 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATIC_URL = "static/"
 STATICFILES_DIRS = [
     BASE_DIR / "app_tudo_list/static",
-    BASE_DIR / "register/static",
-    BASE_DIR / "historico/static",
 ]
 
 STORAGES = {
