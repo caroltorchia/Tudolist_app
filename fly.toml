@@ -25,6 +25,10 @@ console_command = '/code/manage.py shell'
   cpu_kind = 'shared'
   cpus = 1
 
+[mounts]
+source="/app_tudo_list/static"
+destination="/app/static"
+
 [[statics]]
   guest_path = '/app/app_tudo_list/static'
   url_prefix = '/static/'
