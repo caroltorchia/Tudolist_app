@@ -25,10 +25,9 @@ SECRET_KEY = environ.get('SECRET_KEY', INSECURE_SECRET_KEY)
 
 DEBUG = environ.get('DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = ["*"]
 INTERNAL_IPS = ["128.0.0.1"]
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'https://tudolist-app.fly.dev/']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'https://tudolist-app.fly.dev/',  'tudolist-app.fly.dev']
 
 CSRF_TRUSTED_ORIGINS = ['https://tudolist-app.fly.dev/']
 
