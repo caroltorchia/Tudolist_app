@@ -26,7 +26,7 @@ console_command = '/code/manage.py shell'
   cpus = 1
 
 [mounts]
-source="/app_tudo_list/static"
+source="tudolist"
 destination="/app/static"
 
 [[statics]]
