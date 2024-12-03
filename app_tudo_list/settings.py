@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
+
 from os import path, environ
 from pathlib import Path
 from dotenv import load_dotenv
@@ -19,17 +20,28 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 ENV_PATH = load_dotenv(path.join(BASE_DIR, ".env"))
 load_dotenv(ENV_PATH)
 
-INSECURE_SECRET_KEY = 'django-insecure-&psk#na5l=p3q8_a+-$4w1f^lt3lx1c@d*p4x$ymm_rn7pwb87'
+INSECURE_SECRET_KEY = (
+    "django-insecure-&psk#na5l=p3q8_a+-$4w1f^lt3lx1c@d*p4x$ymm_rn7pwb87"
+)
 
-SECRET_KEY = environ.get('SECRET_KEY', INSECURE_SECRET_KEY)
+SECRET_KEY = environ.get("SECRET_KEY", INSECURE_SECRET_KEY)
 
-DEBUG = environ.get('DEBUG', '') != 'False'
+DEBUG = environ.get("DEBUG", "") != "False"
 
 INTERNAL_IPS = ["128.0.0.1"]
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'https://tudolist-app.fly.dev/',  'tudolist-app.fly.dev']
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    "https://tudolist-app.fly.dev/",
+    "tudolist-app.fly.dev",
+]
 
-CSRF_TRUSTED_ORIGINS = ['https://tudolist-app.fly.dev/']
+CSRF_TRUSTED_ORIGINS = [
+    "https://tudolist-app.fly.dev/",
+    "http://localhost:8000",
+    "http://127.0.0.1:8000",
+]
 
 
 # Application definition
@@ -49,7 +61,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -133,7 +145,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = BASE_DIR / "staticfiles"
 STATIC_URL = "static/"
 STATICFILES_DIRS = [
     BASE_DIR / "app_tudo_list/static",

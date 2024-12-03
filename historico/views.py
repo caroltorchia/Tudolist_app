@@ -34,6 +34,7 @@ def adicionar_nota(request):
             nota = form.save(commit=False)
             nota.usuario = request.user
             nota.save()
+            print(f'nota:  {nota}')
             return redirect("historico:index")
 
     return render(request, "notas/adicionar.html", {"form": form})
