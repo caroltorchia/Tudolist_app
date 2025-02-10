@@ -37,7 +37,7 @@ sqlparse==0.5.2
 stack-data==0.6.3
 tqdm==4.67.1
 traitlets==5.14.3
-tzdata==2024.2
+tzdata==2025.1
 wcwidth==0.2.13
 whitenoise==6.8.2
 wmctrl==0.5
